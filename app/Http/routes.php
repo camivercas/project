@@ -20,8 +20,11 @@ Route::get('about','PagesController@about');
 Route::get('home', 'HomeController@index');
 
 Route::get('estudiantes','EstudiantesController@index');
+Route::get('estudiantes/{id}','EstudiantesController@show');
 
-Route::get('roles','RolesController@index');
+
+Route::get('administrador/opciones','AdministradorController@opciones');
+Route::get('administrador/opciones/crear-campus','AdministradorController@crear_campus');
 
 
 
