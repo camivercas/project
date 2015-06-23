@@ -13,9 +13,27 @@
 
 Route::get('/', 'WelcomeController@index');
 
+Route::get('contact','PagesController@contact');
+
+Route::get('about','PagesController@about');
+
 Route::get('home', 'HomeController@index');
 
+Route::get('estudiantes','EstudiantesController@index');
+
+Route::get('roles','RolesController@index');
+
+
+
+
 Route::controllers([
+    //'estudiantes' => 'EstudiantesController',
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('example', function () {
+
+    return view('examples.template');
+
+});
